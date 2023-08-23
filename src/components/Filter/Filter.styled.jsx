@@ -24,7 +24,7 @@ export const Input = styled.input`
   padding-left: ${p => p.theme.space[4]}px;
   padding-right: ${p => p.theme.space[4]}px;
 
-  ${'' /* border: 0; */}
+  border: 1px solid grey;
   outline: 0;
   border-radius: 8px;
   color: ${props => props.theme.colors.text};

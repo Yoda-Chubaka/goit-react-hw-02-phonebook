@@ -25,7 +25,7 @@ export const Item = styled.li`
 
 export const Btn = styled.button`
   padding-top: ${p => p.theme.space[2]}px;
-  padding-bottom: ${p => p.theme.space[2]}px;
+  padding-bottom: ${p => p.theme.space[1]}px;
   padding-left: ${p => p.theme.space[3]}px;
   padding-right: ${p => p.theme.space[3]}px;
 
