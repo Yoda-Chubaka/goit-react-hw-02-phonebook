@@ -2,8 +2,6 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { nanoid } from 'nanoid';
-// import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
-// import { IoMdPersonAdd } from 'react-icons/io';
 import PropTypes from 'prop-types';
 
 import {
@@ -42,10 +40,7 @@ export const ContactForm = ({ onAddContact }) => {
         number: '',
       }}
       onSubmit={(values, { resetForm }) => {
-        //console.log(values);
-        //console.log(actions); // resetForm, validateForm, ...
         onAddContact({ id: nanoid(), ...values });
-        //console.log(values);
         resetForm();
       }}
       validationSchema={schema}
@@ -53,7 +48,6 @@ export const ContactForm = ({ onAddContact }) => {
       <Form autoComplete="off">
         <FormField htmlFor="name">
           <LabelWrapper>
-            {/* <BsPersonFill /> */}
             Name
           </LabelWrapper>
           <FieldFormik
@@ -67,7 +61,6 @@ export const ContactForm = ({ onAddContact }) => {
         </FormField>
         <FormField htmlFor="number">
           <LabelWrapper>
-            {/* <BsFillTelephoneFill /> */}
             Number
           </LabelWrapper>
           <FieldFormik
@@ -80,7 +73,6 @@ export const ContactForm = ({ onAddContact }) => {
           <ErrorMessage name="number" component="span" />
         </FormField>
         <StyledButton type="submit">
-          {/* <IoMdPersonAdd size="16" /> */}
           Add contact
         </StyledButton>
       </Form>

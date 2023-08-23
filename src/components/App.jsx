@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { GlobalStyle } from './GlobalStyle';
-
 import { Layout } from './Layout/Layout';
 import { Section } from './Section/Section';
 import { ContactForm } from './ContactForm/ContactForm';
@@ -30,7 +29,6 @@ export default class App extends Component {
 
   componentDidMount() {
     const contactsFromLS = localStorage.getItem('contacts');
-    //console.log(contactsFromLS);
     const parsedContacts = JSON.parse(contactsFromLS);
     if (!parsedContacts) return;
     this.setState({ contacts: parsedContacts });
@@ -38,20 +36,11 @@ export default class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.contacts !== prevState.contacts) {
-      //console.log(this.state.contacts);
-      //console.log(prevState.contacts);
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
 
   addContact = newContact => {
-    // this.state.contacts.filter(
-    //   contact =>
-    //     contact.name.toLowerCase().trim() ===
-    //       newContact.name.toLowerCase().trim() ||
-    //     contact.number.trim() === newContact.number.trim()
-    // ).length
-
     const { contacts } = this.state;
 
     contacts.some(

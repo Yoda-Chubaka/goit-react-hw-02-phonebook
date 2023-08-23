@@ -9,7 +9,6 @@ export const LabelDescr = styled.label`
   width: 300px;
 
   color: ${props => props.theme.colors.black};
-  ${'' /* text-shadow: ${props => props.theme.shadows.textShadow}; */}
 `;
 
 export const LabelWrapper = styled.div`
@@ -28,10 +27,8 @@ export const Input = styled.input`
   outline: 0;
   border-radius: 8px;
   color: ${props => props.theme.colors.text};
-  ${'' /* text-shadow: 0 0.5px 0.5px 0.5px #fff; */}
 
   background-color: transparent;
-  ${'' /* box-shadow: inset 1px 1px 3px #b0706f, inset -1px -1px 5px #fff; */}
 
   font-size: ${props => props.theme.fontSizes.s};
 `;

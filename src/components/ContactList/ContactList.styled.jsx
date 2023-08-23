@@ -19,7 +19,6 @@ export const Item = styled.li`
   gap: 16px;
 
   color: ${p => p.theme.colors.text};
-  ${'' /* text-shadow: 0.5px 0.5px 0.5px #fff; */}
   font-size: ${props => props.theme.fontSizes.s};
 `;
 
@@ -33,16 +32,12 @@ export const Btn = styled.button`
   outline: none;
   border-radius: 8px;
 
-  color: ${p => p.theme.colors.white};
+  color: ${p => p.theme.colors.black};
   background-color: ${p => p.theme.colors.muted};
-  ${'' /* box-shadow: ${p => p.theme.shadows.boxShadow};
-  transition: all 0.2s ease-in-out; */}
 
-  :hover,
-  :focus {
-    background-color: ${p => p.theme.colors.secondary};
-
-    color: ${p => p.theme.colors.text};
-  
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: white;
   }
 `;

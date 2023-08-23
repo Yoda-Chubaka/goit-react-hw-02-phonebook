@@ -52,7 +52,6 @@ export const FieldFormik = styled(Field)`
 export const ErrorMessage = styled(FormikError)`
   max-width: 500px;
   color: #f50a0a;
-  ${'' /* text-shadow: 0 0.5px 0.5px #fff; */}
 `;
 
 export const StyledButton = styled.button`
