@@ -1,14 +1,13 @@
 import { ContactItemStyle } from './ContactItem.styled';
 import PropTypes from 'prop-types';
-import { Btn } from './ContactList.styled';
+import { ButtonStyle } from 'components/App.styled';
 
-export const ContactItem = ({ name, number, id, onDelete }) => {
+export const ContactItem = ({ name, number, id, onDeleteContact }) => {
 return (<ContactItemStyle key={id}>
-        <span>{name}:</span>
-        <span>{number}</span>
-        <Btn type="button" onClick={() => onDelete(id)}>
+        <p>{name}: {number}</p>
+        <ButtonStyle type="button" onClick={() => onDeleteContact(id)}>
             Delete
-        </Btn>
+        </ButtonStyle>
     </ContactItemStyle>);
 }
 

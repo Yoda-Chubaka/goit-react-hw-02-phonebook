@@ -88,7 +88,7 @@ export default class App extends Component {
           <Title title="Contacts" />
           <Filter value={filter} onChange={this.changeFilter} />
           <ContactList
-            onDelete={this.deleteContact}
+            onDeleteContact={this.deleteContact}
             contacts={visibleContacts}
           />
         </Section>
